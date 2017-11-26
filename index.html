@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo with jQuery</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="description" content="Router">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css">
+		<link rel="stylesheet/less" type="text/css" href="router.less"/>
+		<script src="bower_components/less/dist/less.min.js"></script>
+	</head>
+	<body>
+		<div id="cr-load" class="progress">
+			<div class="determinate"></div>
+		</div>
+
+		<nav>
+			<div class="nav-wrapper">
+				<a href="#" class="brand-logo">Router</a>
+			</div>
+		</nav>
+
+		<main id="container">
+			<p>1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna est, fermentum a venenatis pretium, porta nec lacus. Maecenas ultricies urna ut purus mollis posuere. Curabitur commodo nibh orci, in hendrerit tortor consequat sed. Morbi gravida eu ex at posuere. Ut ornare dapibus nibh, convallis pharetra risus sagittis et. Nam aliquam blandit nulla id blandit. Vivamus viverra dui ipsum, ac porta tellus maximus at. Donec tristique quis elit eu sollicitudin. Curabitur at eleifend purus, id molestie enim. Integer suscipit quam id erat fringilla, eu pretium felis congue. Praesent dapibus neque quis risus sodales tincidunt. Mauris nec augue ipsum. Integer tincidunt fermentum nunc eu suscipit. Integer aliquet leo vitae neque convallis, eget vestibulum dui pulvinar. Aenean laoreet eros vitae molestie viverra. Sed eu posuere turpis, at dignissim tellus.</p>
+
+			<section id="cr-output">
+				<div id="loading">
+					<h2>Loading</h2>
+				</div>
+			</section>
+
+			<p><a href="/one">One</a>2 Vivamus ut sagittis ipsum. Vivamus porta, neque ut congue aliquet, risus dolor vestibulum nibh, hendrerit fermentum urna turpis a massa. Sed tempor nisi ac dui efficitur, eu iaculis lorem laoreet. Aenean at odio vitae lacus ultricies auctor. Suspendisse tempor purus at mi sodales, in aliquet velit sodales. Aliquam imperdiet vulputate ipsum at vehicula. Phasellus maximus dapibus erat id viverra. Integer eget auctor ligula, eget tincidunt justo. Etiam efficitur tellus eu risus molestie, et ornare nisi tincidunt. Suspendisse condimentum vehicula turpis vel tempus. Sed ligula mauris, feugiat eu vulputate sed, tincidunt vel elit.</p>
+		</main>
+
+		<footer class="page-footer">
+			
+		</footer>
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/materialize/dist/js/materialize.min.js"></script>
+		<script src="ajax_progress.min.js"></script>
+		<script src="router.js"></script>
+		<script>
+			const ROUTES = {
+				'/': {
+					path: '/',
+					location: 'pages/home.html'
+				},
+				'/one': {
+					path: '/one',
+					location: 'pages/one.html'
+				},
+				'/two': {
+					path: '/two',
+					location: 'pages/two.html'
+				}
+			};
+			let router = new CRouter(ROUTES);
+		</script>
+	</body>
+</html>
